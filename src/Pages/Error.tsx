@@ -1,8 +1,12 @@
+import { useRouteError } from "react-router-dom";
+
 const Error = () => {
+  const error = useRouteError();
+
   return (
     <div>
-      <h1 className="text-4xl font-bold">Error</h1>
-      <p>Something went wrong.</p>
+      <h1>Route Error</h1>
+      <p>{String(error)}</p>
     </div>
   );
 };
